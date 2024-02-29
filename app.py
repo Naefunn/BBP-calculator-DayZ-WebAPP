@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import os
 
 app = Flask(__name__)
 
@@ -50,5 +51,6 @@ def calculate():
     return render_template('result.html', result=result)
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
+    # Use the PORT environment variable if provided by Heroku, or default to 5000 for local development
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)

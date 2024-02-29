@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materials Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Materials Calculator</h1>
+    <form action="/calculate" method="post">
+        <label for="quantity_large_wall">Large Wall:</label>
+        <input type="number" name="quantity_large_wall" required>
+        <br>
+        <label for="quantity_large_door">Large Door:</label>
+        <input type="number" name="quantity_large_door" required>
+        <br>
+        <label for="quantity_small_door">Small Door:</label>
+        <input type="number" name="quantity_small_door" required>
+        <br>
+        <label for="quantity_garage_door">Garage Door:</label>
+        <input type="number" name="quantity_garage_door" required>
+        <br>
+        <label for="quantity_large_floor">Large Floor:</label>
+        <input type="number" name="quantity_large_floor" required>
+        <br>
+        <label for="quantity_large_roof">Large Roof:</label>
+        <input type="number" name="quantity_large_roof" required>
+        <br>
+        <label for="quantity_foundation">Foundation:</label>
+        <input type="number" name="quantity_foundation" required>
+        <br>
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+</html>
